@@ -1,14 +1,11 @@
-title: Panorama-Plevenska-Epopeq-1877
-email: your-email@example.com
-description: >- # this means to ignore newlines until next key
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Панорама "Плевенска епопея 1977"
+email: panoramapleven@gmail.com
+contact_phone: 064/830 251
+description: Научи повече за Панаромата в Плевен!
 destination: docs
 baseurl: "/Panorama-Plevenska-Epopeq-1877"
 url: ""
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username: GeorgiParvanov
 
 # Build settings
 plugins:

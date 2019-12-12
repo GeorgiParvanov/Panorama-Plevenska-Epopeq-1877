@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
+    <script>
+        window.addEventListener('load', (event) => {
+            document.querySelector('body').classList.add('loaded');
+        });
+    </script>
+</head>
+<body>
+
+<div class="site">
+
+    <div class="site-header">
+        <!-- <div class="site-branding"> -->
+            <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+            <!-- <p>{{ site.description }}</p> -->
+        <!-- </div> -->
+
+        {% include navigation.html location="header" %}
+    </div>
+
+    {% if page.media_title %}
+    <section class="site-media" style="background-image: url('{{ page.featured_image }}');">
+                
+        {% if page.media_title %}
+        <h2>{{ page.media_title }}</h2>
+        {% endif %}
+        {% if page.media_desc %}
+            <p>{{ page.media_desc }}</p>
+        {% endif %}
+        {% if page.social == 1 %}
+        <!-- <ul class="social">
+            <li>
+                <a href="#">F</a>
+            </li>
+            <li>
+                <a href="#">T</a>
+            </li>
+            <li>
+                <a href="#">L</a>
+            </li>
+            <li>
+                <a href="#">I</a>
+            </li>
+        </ul> -->
+        {% endif %}
+        
+    </section>
+    {% endif %}
+
+    <div class="site-main">
+            {{ content }}
+    </div>
+
+    <div class="site-footer">
+        <div class="site-footer-Info">
+            <p>{{ site.title }}</p>
+            <p>{{ site.description }}</p>
+            <p>Статичен сайт с цел обучение - курс от СофтУни</p>
+        </div>
+
+        <div class="site-footer-contacts">
+            <p>Тел: {{ site.contact_phone }}</p>
+            <p>{{ site.email }}</p>
+        </div>
+
+        {% include navigation.html location="footer" %}
+         
+    </div>
+
+</div>
+    
+</body>
+</html>

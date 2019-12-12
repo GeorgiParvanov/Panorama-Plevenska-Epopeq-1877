@@ -1,0 +1,27 @@
+.site-footer {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p,
+    a {
+        opacity: 0.4;
+        transition: opacity 0.3s ease-in;
+    }
+
+    a {
+        color: black;
+    }
+
+    p {
+        &:first-child {
+            font-size: 1.6em;
+        }
+    }
+
+    &:hover p,
+    &:hover a {
+        opacity: 0.8;
+    }
+}

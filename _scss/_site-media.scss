@@ -1,0 +1,68 @@
+.site-media {
+	min-height: 60vh;
+	overflow: hidden;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 2em;
+}
+
+.site-media:before {
+	display: block;
+	content: '';
+	background: rgba(19,41,48,.3);
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0;
+}
+
+.site-media {
+	width: 100%;
+	color: #B0E57C;
+	position: relative;
+	z-index: 10;
+	font-size: 1.6em;
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	
+
+	@include bp(desktop) {
+		padding-right: 10em;
+	}
+	
+	h2,
+	p,
+	.social {
+		transform: translate(-37em, 0);
+        opacity: 0;
+        position: relative;
+        transition: opacity 2s ease-in, transform 1.5s ease-in;
+
+        .loaded & {
+            opacity: 1;
+            transform: translate(0, 0);
+            transition-delay: 0;
+        }
+	}
+    
+    h2 {
+		font-weight: 700;
+		position: relative;
+		z-index: 10;
+    }
+
+    p {
+        font-weight: 400;
+        opacity: 0.8;
+    }
+    
+    .social {
+        padding-top: 2em;
+    }
+}
