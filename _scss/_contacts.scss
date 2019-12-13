@@ -1,0 +1,66 @@
+iframe {
+    width: 100%;
+}
+
+h1 {
+    color: green;
+    padding: 0.5em;
+    padding-bottom: 0;
+}
+
+hr {
+    width: 150px;
+    height: 6px;
+    margin: 1em auto;
+    background-color: red;
+}
+
+.contacts-list {
+
+    width: 100em;
+    margin: 0 auto;
+    padding: 2em;
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        display: flex;
+        align-items: center;
+        
+        span {
+            font-size: 1.1em;
+            color: green;
+        }
+    }
+
+    list-style-type: none;
+
+    .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+    }
+
+    .icon-library {
+        font-size: 2em;
+        width: 1.5em;
+        color: green;
+    }
+
+    .icon-envelop {
+        font-size: 2em;
+        width: 1.5em;
+        color: green;
+    }
+
+    .icon-mobile {
+        font-size: 2em;
+        width: 1.5em;
+        color: green;
+    }
+}
+
