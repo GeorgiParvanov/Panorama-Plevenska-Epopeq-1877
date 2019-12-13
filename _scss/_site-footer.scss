@@ -1,5 +1,5 @@
 .site-footer {
-    background-color: #B0E57C;
+    background-color: white;
     padding: 2em;
     display: flex;
     align-items: center;
@@ -8,24 +8,19 @@
     p,
     a {
         font-weight: bold;
-        opacity: 0.4;
+        opacity: 0.6;
         transition: opacity 0.3s ease-in;
-    }
-
-    a {
-        color: white;
+        color: green;
     }
 
     li:hover > a,
     .current-page > a,
     a:focus,
     a:hover {
-        background: grey;
-        color: white;
+        background: green;
     }
 
     p {
-        color: white;
         &:first-child {
             font-size: 1.6em;
         }
