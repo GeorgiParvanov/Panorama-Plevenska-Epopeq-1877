@@ -5,6 +5,23 @@
     align-items: center;
     justify-content: space-between;
 
+    @include bp(phone){
+        flex-direction: column;
+        align-items: unset;
+
+        .site-footer-Info {
+            order: 3;
+        }
+
+        .site-footer-contacts {
+            order: 2;
+        }
+
+        .site-nav  location-footer {
+            order: 1;
+        }
+    }
+
     p,
     a {
         font-family: 'Lobster', cursive;
