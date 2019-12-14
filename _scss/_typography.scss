@@ -1,29 +1,34 @@
-// @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,700,700i|Fira+Sans:300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 html {
 	font: 12px/1.5 'Roboto', sans-serif;
 
-	@include bp(mobile) {
-		font-size: 14px;
-	}
-
-	@include bp(phone) {
-		font-size: 12px;
-	}
+	
 
 	@include bp(desktop) {
 		font-size: 16px;
 	}
+
+	@include bp(large) {
+		font-size: 18px;
+	}
+	
+	@include bp(mobile) {
+		font-size: 14px;
+	}
+
+	@include bp(tablet) {
+		font-size: 12px;
+	}
+
+	@include bp(phone) {
+		font-size: 10px;
+	}
+
 }
 
 body, button, input, select, option {
 	font: inherit;
-}
-
-a {
-	text-decoration: none;
-	color: #369;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,8 +43,4 @@ h3 { font-size: 1.8em; }
 h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1.0em; }
-
-p {
-	font-family: 'Roboto', sans-serif;
-}
 
