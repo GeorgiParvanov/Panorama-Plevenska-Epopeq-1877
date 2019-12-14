@@ -21,11 +21,11 @@ html {
 	}
 
 	@include bp(tablet) {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	@include bp(phone) {
-		font-size: 13px;
+		font-size: 14px;
 	}
 
 }
