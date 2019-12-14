@@ -4,14 +4,19 @@ h1 {
 
 .lesson {
     display: flex;
+    flex-wrap: wrap;
     color: green;
 
     &:nth-child(even) {
         flex-direction: row-reverse;
-        
-        @include bp(small-tablet) {
+
+        @include bp(mobile) {
             flex-direction: column;
         }
+    }
+
+    @include bp(mobile) {
+        flex-direction: column;
     }
 
     hr {
@@ -46,6 +51,7 @@ h1 {
 
 
         p {
+            font-family: 'Lobster', cursive;
             font-size: 1.7em;
             text-align: center;
             padding: 1em;
@@ -61,6 +67,10 @@ h1 {
         font-size: 1.2em;
         line-height: 1.5;
 
+        @include bp(tablet) {
+            padding: 3em;
+        }
+
         h2 {
             text-align: center;
             padding-bottom: 0;
@@ -71,139 +81,3 @@ h1 {
         }
     }
 }
-
-// .history {
-//     max-width: 80vw;
-//     margin: 0 auto;
-//     height: 100%;
-//     margin-bottom: 3em;
-
-//     .lesson {
-//         display: flex;
-//         // justify-content: space-between;
-//         // outline-style: solid;
-//         // outline-width: thin;
-//         // outline-offset: 0.7em;
-//         border: 1px solid black;    
-//         height: 55vh;
-//         margin: 3em 0;
-//         background-color: #EEE;
-//         position: relative;
-//         // box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
-
-//         @include bp(mobile) {
-//             height: 70vh;
-//         }
-
-//         @include bp(big-tablet) {
-//             height: 75vh;
-//             margin: 3em 2em;
-//         }
-
-//         @include bp(tablet) {
-//             height: 70vh;
-//         }
-
-//         @include bp(small-tablet) {
-//             flex-direction: column;
-//             height: 90vh;
-//             margin: 3em 2em;
-//         }
-
-//         @include bp(phone) {
-//             margin: 3em 1.5em;
-//             height: 68vh;
-//         }
-        
-//         @include bp(small-phone) {
-//             height: 55vh;
-//         }
-
-//         &:nth-child(even) {
-//             flex-direction: row-reverse;
-
-//             .lesson-media {
-//                 border-left: 1px solid black;
-//                 border-right: none;
-//             }
-            
-//             @include bp(small-tablet) {
-//                 flex-direction: column;
-//             }
-//         }
-//     }
-
-//     .lesson-media {
-//         flex: 1 1 50%;
-//         border-right: 1px solid black;
-//         overflow: hidden;
-//         box-shadow: inset 0 0 1.5em #888888;
-//         position: relative;
-
-//         @include bp(phone) {
-//             flex: 0 1 40%;
-//         }
-
-//         @include bp(medium-phone) {
-//             flex: 1 0 40%;
-//         }
-
-//         img {
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             transform: translate(-50%, -50%);
-
-//             @include bp(phone) {
-//                 width: 100%;
-//             }
-
-//             @include bp(medium-phone) {
-//                 height: 150%;
-//             }
-
-//             @include bp(small-phone) {
-//                 height: 110%;
-//             }
-//         }
-//     }
-
-//     .lesson-content {
-//         flex: 1 1 50%;
-//         padding: 1em 2em;
-//         box-shadow:inset 0 0 1em #888888;
-
-//         @include bp(tablet) {
-//             padding: 1em;
-//             font-size: 0.9em;
-//         }
-
-//         @include bp(phone) {
-//             font-size: 0.7em;
-//             padding: 1em;
-//             flex: 1 0 60%;
-//         }
-
-//         @include bp(medium-phone) {
-//             font-size: 0.6em;
-//         }
-
-//         @include bp(small-phone) {
-//             font-size: 0.5em;
-//             padding: 1em;
-//         }
-
-//         h2 {
-//             font-weight: 500;
-
-//             @include bp(small-tablet) {
-//                 font-size: 1.5em;
-//             }
-
-//             @include bp(phone) {
-//                 padding: 0.5em 0;
-//             }
-
-//         }
-//     }
-// }

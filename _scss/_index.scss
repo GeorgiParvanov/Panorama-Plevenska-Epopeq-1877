@@ -184,6 +184,10 @@
             &:before {
                 padding-top: 72%;
             }
+
+            @include bp(mobile) {
+                grid-column: span 4;
+            }
         }
         
         a {
